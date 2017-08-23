@@ -29,9 +29,6 @@ if __name__ == '__main__':
     action = str(argv[1])
     path = str(argv[2])
 
-    #action = "post"
-    #path = "/Users/nissim/Desktop/tests"
-
     if action == "install":
         installScript(path=path)
     else:

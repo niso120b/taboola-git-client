@@ -9,6 +9,7 @@ Solution By Nissim Bitan, Mamram almuni with 5 years experience in multi Cloud D
 ## Installation
 Scan recursive a given path and search for local git repositories and on each repository
 the installation script inject the hook script to the git repository hooks folder.
+
 **Usage:**
 
 ``pyhton CLIENT_SCRIPT install PATH``
@@ -22,7 +23,8 @@ and its scan the /opt/ folder recursive and run the installation
 ## Post
 
 when users at systems that the client are allready install and the hook script inside the git repository make a commit
-so the client send the data about the commit in POST request and the server print it.
+so the client send the data about the commit in **POST** request and the server print it.
+
 **Usage:**
 
 ``pyhton CLIENT_SCRIPT post PATH``
