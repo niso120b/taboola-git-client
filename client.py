@@ -19,7 +19,7 @@ from Classes.SendPost import sendCommitData, setDataInDict
 """
 if __name__ == '__main__':
     print("Taboola Git Client")
-
+    '''
     if len(argv) != 3:
         print("ERROR: you should pass two parameters action and path")
         print(" Install: python /opt/taboola/client.py install /opt/")
@@ -28,19 +28,17 @@ if __name__ == '__main__':
     
     action = str(argv[1])
     path = str(argv[2])
+    '''
 
-    #action = "post"
-    #path = "/Users/nissim/Desktop/taboola_java/taboola-java-jenkins"
+    action = "post"
+    path = "/Users/nissim/Desktop/tests"
 
     if action == "install":
         installScript(path=path)
     else:
         if action == "post":
             repo = GitRepo(path=path, odbt=GitCmdObjectDB)
-            if len(repo.head.commit.parents) == 1:
-                commit_id = repo.head.commit.parents[0].hexsha
-            else:
-                commit_id = repo.head.commit.parents[-1].hexsha
+            commit_id = str(repo.head.commit.hexsha)
             commit = GitCommit(repo=repo, commit_id=commit_id)
             data = setDataInDict(commit=commit)
             sendCommitData(data=data)
