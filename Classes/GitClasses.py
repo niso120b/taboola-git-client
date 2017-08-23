@@ -246,7 +246,7 @@ class GitTree():
 
     Represent a directory in repository tree
 """
-class GitDir:
+class GitDir(object):
     def __init__(self, tree, parent=None):
         self.tree = tree
         self.parent = parent
@@ -287,7 +287,7 @@ class GitDir:
 
     Represent a file in repository tree
 """
-class GitFile:
+class GitFile(object):
     def __init__(self, blob):
         self.blob = blob
 
