@@ -33,7 +33,7 @@ so the client send the data about the commit in POST request and the server prin
 
 ### Server Output Example
 
-``
+```
 * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ----------------Commit Details------------------
 Author: niso120b
@@ -73,7 +73,7 @@ b'@@ -7,7 +7,7 @@ and create all the ci process in jenkins.
 '
 ------------------------------------------------
 127.0.0.1 - - [23/Aug/2017 01:16:37] "POST /post_commit/ HTTP/1.1" 200 -
-``
+```
 
 ## Contact
 
