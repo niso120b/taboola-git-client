@@ -1,6 +1,6 @@
 import json
 import requests
-from Classes.GitClasses import GitRepo, GitCommit, GitDir
+from Classes.GitClasses import GitRepo, GitCommit, GitDir, GitFile
 
 """
     ------------------------------------
@@ -44,7 +44,8 @@ def setDataInDict(commit):
         if type(item) is GitDir:
             result["files"].append({"type":"directory", "path": item.tree.path})
         else:
-            result["files"].append({"type": "file", "path": item.blob.path})
+            if type(item) is GitFile:
+                result["files"].append({"type": "file", "path": item.blob.path})
 
     result["diff"] = []
     diffs = commit.getChanges()

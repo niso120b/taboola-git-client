@@ -15,7 +15,7 @@ from Classes.GitClasses import GitRepo, GitCommit, GitDir
     Output      - None
 """
 def copyHookFile(work_path, hook_path):
-    j2_env = Environment(loader=FileSystemLoader('Templates'), trim_blocks=True)
+    j2_env = Environment(loader=FileSystemLoader('/opt/Templates'), trim_blocks=True)
     template = j2_env.get_template('post-commit.j2')
     rendered_template = template.render(script_path='/opt/taboola/client.py', git_path=work_path)
     new_file_path = hook_path+"/post-commit"
