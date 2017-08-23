@@ -1,2 +1,3 @@
 GitPython
 jinja2
+requests
