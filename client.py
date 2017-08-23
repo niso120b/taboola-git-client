@@ -19,7 +19,7 @@ from Classes.SendPost import sendCommitData, setDataInDict
 """
 if __name__ == '__main__':
     print("Taboola Git Client")
-    '''
+
     if len(argv) != 3:
         print("ERROR: you should pass two parameters action and path")
         print(" Install: python /opt/taboola/client.py install /opt/")
@@ -28,10 +28,9 @@ if __name__ == '__main__':
     
     action = str(argv[1])
     path = str(argv[2])
-    '''
 
-    action = "post"
-    path = "/Users/nissim/Desktop/tests"
+    #action = "post"
+    #path = "/Users/nissim/Desktop/tests"
 
     if action == "install":
         installScript(path=path)
